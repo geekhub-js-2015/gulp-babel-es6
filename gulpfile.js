@@ -17,7 +17,7 @@ const gulp = require('gulp'),
 
 gulp.task('default', ['build']);
 
-gulp.task('build', ['scripts', 'scripts:hint', 'scripts:polyfill', 'html']);
+gulp.task('build', ['scripts', 'scripts:hint', 'html']);
 
 //gulp.task('scripts', () => {
 //    return gulp.src('app/js/**/*.js')
@@ -51,13 +51,6 @@ gulp.task('scripts:hint', () => {
     return gulp.src('app/js/**/*.js')
         .pipe(jshint({esnext: true}))
         .pipe(jshint.reporter(jshintStylish));
-});
-
-gulp.task('scripts:polyfill', () => {
-    return gulp.src(require.resolve('babel-polyfill/dist/polyfill.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('dist/js'))
-        .pipe(livereload());
 });
 
 gulp.task('html', () => {

@@ -25,6 +25,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
+    "babel-polyfill": "^6.1.4",
     "gulp-uglify": "^1.4.2",
     "jquery": "^2.1.4"
   }

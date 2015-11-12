@@ -1,3 +1,4 @@
+import _ from 'babel-polyfill';
 import message from './x';
 import $ from 'jquery';
 
